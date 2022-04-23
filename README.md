@@ -23,10 +23,10 @@ In the main tag \(\<putusan\>\) there are several parameters as metadata from th
 ```python
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
   <kepala_putusan>
-		putusan
-		nomor ...
-		demi keadilan berdasarkan ketuhanan yang maha esa
-		pengadilan ... mengadili perkara pidana dengan acara pemeriksaan biasa dalam tingkat pertama menjatuhkan putusan sebagai berikut dalam perkara
+    putusan
+    nomor ...
+    demi keadilan berdasarkan ketuhanan yang maha esa
+    pengadilan ... mengadili perkara pidana dengan acara pemeriksaan biasa dalam tingkat pertama menjatuhkan putusan sebagai berikut dalam perkara
   </kepala_putusan>
   <identitas>
     1 nama lengkap ...
