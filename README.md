@@ -1,6 +1,6 @@
 # court-decisions
 
-There are **31,542 court decision documents for general criminal cases** in the dataset folder. The files available are in **xml format**. The main tag of each file is the "\<putusan\>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are \<kepala_putusan\>\, \<identitas\>\, \<riwayat_penahanan\>\, \<riwayat_perkara\>\, \<riwayat_tuntutan\>\, \<riwayat_dakwaan\>\, \<fakta\>\, \<fakta_hukum\>\, \<pertimbangan_hukum\>\, \<amar_putusan\>\, and \<penutup\>\. The following is a further explanation of the tags:
+There are **31,542 court decision documents for general criminal cases** in the `dataset` folder. The files available are in **xml format**. The main tag of each file is the "\<putusan\>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are \<kepala_putusan\>\, \<identitas\>\, \<riwayat_penahanan\>\, \<riwayat_perkara\>\, \<riwayat_tuntutan\>\, \<riwayat_dakwaan\>\, \<fakta\>\, \<fakta_hukum\>\, \<pertimbangan_hukum\>\, \<amar_putusan\>\, and \<penutup\>\. The following is a further explanation of the tags:
 
 | No. | Document Sections | Strings That Often Identified the Sections |
 | --- | --- | --- |
