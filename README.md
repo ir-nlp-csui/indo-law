@@ -1,8 +1,8 @@
 # court-decisions
 
-There are 31,542 district court decision documents for general criminal cases in the dataset folder. The files available are in xml format. The main tag of each file is the "<putusan>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are <kepala_putusan>, <identitas>, <riwayat_penahanan>, <riwayat_perkara>, <riwayat_tuntutan>, <riwayat_dakwaan>, <fakta>, <fakta_hukum>, <pertimbangan_hukum>, <amar_putusan>, and <penutup>. Not only that, in the main tag (<putusan>) there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
+There are **31,542 court decision documents for general criminal cases** in the dataset folder. The files available are in **xml format**. The main tag of each file is the "<putusan>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are <kepala_putusan>, <identitas>, <riwayat_penahanan>, <riwayat_perkara>, <riwayat_tuntutan>, <riwayat_dakwaan>, <fakta>, <fakta_hukum>, <pertimbangan_hukum>, <amar_putusan>, and <penutup>. Not only that, in the main tag (<putusan>) there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
 
-
+```python
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
 	<kepala_putusan>
 		putusan
@@ -50,3 +50,4 @@ There are 31,542 district court decision documents for general criminal cases in
 		demikianlah diputuskan dalam sidang permusyawaratan majelis hakim pengadilan negeri ...
 	</penutup>
 </putusan>
+```
