@@ -16,7 +16,9 @@ There are **31,542 court decision documents for general criminal cases** in the 
 | 10. | Amar putusan (*verdict*) | ‘MENGADILI’ (‘*JUDGE*’) |
 | 11. | Penutup (*closing*) | ‘Demikianlah...’  (‘*Declares...*’) |
 
-Not only that, in the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file.
+## Metadata court decision documents
+
+In the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
 
 ```python
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
