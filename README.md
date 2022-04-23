@@ -22,7 +22,7 @@ The main tag of each file is the "\<putusan\>" decision tag. The section of the 
 
 In the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
 
-```python
+```xml
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
   <kepala_putusan>
     putusan
