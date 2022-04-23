@@ -1,11 +1,22 @@
 # court-decisions
 
-There are **31,542 court decision documents for general criminal cases** in the dataset folder. The files available are in **xml format**. The main tag of each file is the "\<putusan\>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are \<kepala_putusan\>\, \<identitas\>\, \<riwayat_penahanan\>\, \<riwayat_perkara\>\, \<riwayat_tuntutan\>\, \<riwayat_dakwaan\>\, \<fakta\>\, \<fakta_hukum\>\, \<pertimbangan_hukum\>\, \<amar_putusan\>\, and \<penutup\>\. Not only that, in the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file.
+There are **31,542 court decision documents for general criminal cases** in the dataset folder. The files available are in **xml format**. The main tag of each file is the "\<putusan\>" verdict tag. The structure of the decision is represented by eleven child tags. The eleven tags are \<kepala_putusan\>\, \<identitas\>\, \<riwayat_penahanan\>\, \<riwayat_perkara\>\, \<riwayat_tuntutan\>\, \<riwayat_dakwaan\>\, \<fakta\>\, \<fakta_hukum\>\, \<pertimbangan_hukum\>\, \<amar_putusan\>\, and \<penutup\>\. The following is a further explanation of the tags:
 
 | No. | Document Sections | Strings That Often Identified the Sections |
 | --- | --- | --- |
-| 1. | Kepala putusan (document opener) | ‘PUTUSAN’ (‘DECISION’) Always in the first line |
-| 2. | Identitas terdakwa (defendant’s identity) | ‘Nama...’, ‘Terdakwa I: Nama...’ (‘Name …’, “Defendant I: Name ..”) |
+| 1. | Kepala putusan (*document opener*) | ‘PUTUSAN’ (‘*DECISION*’) Always in the first line |
+| 2. | Identitas terdakwa (*defendant’s identity*) | ‘Nama...’, ‘Terdakwa I: Nama...’ (‘*Name ...*’, “*Defendant I: Name ...*”) |
+| 3. | Riwayat perkara (*case history*) | ‘Para terdakwa didampingi oleh penasihat...’, ‘Pengadilan Negeri tersebut’ (‘*The defendants were accompanied by an adviser...*’) |
+| 4. | Riwayat penahanan (*detention history*) | ‘Terdakwa ditahan dengan penahanan Rumah/Rutan/Kota/Negara oleh...’, ‘Terdakwa dalam perkara ini tidak ditahan’ (‘*The defendant was detained at Home/Detention Center/City/State detention by...*’, ‘*The defendant in this case was not detained*’) |
+| 5. | Riwayat tuntutan (*prosecution history*) | ‘Telah/Setelah mendengar tuntutan...’ (‘*After hearing the demands...*’) |
+| 6. | Riwayat dakwaan (*indictment history*) | ‘Menimbang, bahwa terdakwa... dakwaan Jaksa...’ (‘*Considering, that the defendant... the prosecutor’s indictment...*’) |
+| 7. | Fakta (*facts*) | ‘Menimbang, bahwa dipersidangan telah mengajukan/mendengar/membaca/memeriksa...’ (‘*Considering, that at the court submitted/heard/read/examined...*’) |
+| 8. | Fakta hukum (*legal facts*) | “Menimbang,... fakta-fakta/fakta hukum...” (“*Considering,... facts/legal facts...*”) |
+| 9. | Pertimbangan hukum (*legal considerations*) | ‘Menimbang,... majelis hakim... berdasarkan fakta hukum/fakta-fakta...’ (‘*Considering,... the panel of judges... based on facts/legal facts...*’) |
+| 10. | Amar putusan (*verdict*) | ‘MENGADILI’ (‘*JUDGE*’) |
+| 11. | Penutup (*closing*) | ‘Demikianlah...’  (‘*Declares...*’) |
+
+Not only that, in the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file.
 
 ```python
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
