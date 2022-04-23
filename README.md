@@ -1,8 +1,8 @@
 # court-decisions
 
-There are **31,542 court decision documents for general criminal cases** in the `dataset` folder. The files available are in **xml format**. The contents of the xml file are clean text generated from court decision documents in the form of pdf that available on the website of the [Indonesian Supreme Court Decision](https://putusan3.mahkamahagung.go.id/).
+There are **22,630 court decision documents for general criminal cases** in the `dataset` folder. The files available are in **xml format**. The contents of the xml file are clean text generated from court decision documents in the form of pdf that available on the website of the [Indonesian Supreme Court Decision](https://putusan3.mahkamahagung.go.id/).
 
-The main tag of each file is the "\<putusan\>" decision tag. The section of the decision is represented by eleven child tags. The eleven tags are \<kepala_putusan\>\, \<identitas\>\, \<riwayat_penahanan\>\, \<riwayat_perkara\>\, \<riwayat_tuntutan\>\, \<riwayat_dakwaan\>\, \<fakta\>\, \<fakta_hukum\>\, \<pertimbangan_hukum\>\, \<amar_putusan\>\, and \<penutup\>\. The following is a further explanation of the tags:
+The main tag of each file is the `\<putusan\>` decision tag. The section of the decision is represented by eleven child tags. The eleven tags are `\<kepala_putusan\>\`, `\<identitas\>\`, `\<riwayat_penahanan\>\`, `\<riwayat_perkara\>\`, `\<riwayat_tuntutan\>\`, `\<riwayat_dakwaan\>\`, `\<fakta\>\`, `\<fakta_hukum\>\`, `\<pertimbangan_hukum\>\`, `\<amar_putusan\>\`, and `\<penutup\>\`. The following is a further explanation of the tags:
 
 | No. | Document Sections | Strings That Often Identified the Sections |
 | --- | --- | --- |
@@ -18,9 +18,10 @@ The main tag of each file is the "\<putusan\>" decision tag. The section of the 
 | 10. | Amar putusan (*verdict*) | ‘MENGADILI’ (‘*JUDGE*’) |
 | 11. | Penutup (*closing*) | ‘Demikianlah...’  (‘*Declares...*’) |
 
+
 ## Metadata court decision documents
 
-In the main tag \(\<putusan\>\) there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
+In the main tag `\<putusan\>\` there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
 
 ```xml
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
