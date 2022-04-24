@@ -1,6 +1,6 @@
-# court-decisions
+# Dataset Indonesian Law
 
-There are **22,630 court decision documents for general criminal cases** in the `dataset` folder. The files available are in **xml format**. The contents of the xml file are clean text generated from court decision documents in the form of pdf that available on the website of the [Indonesian Supreme Court Decision](https://putusan3.mahkamahagung.go.id/).
+This is a dataset of **court decision documents** for general criminal cases. There are **22,630 file** in the `dataset` folder. The files available in **xml format**. The contents of the xml file are clean text generated from court decision documents in the form of pdf that available on the website of the [Indonesian Supreme Court Decision](https://putusan3.mahkamahagung.go.id/).
 
 The main tag of each file is the `<putusan>` decision tag. The section of the decision is represented by eleven child tags. The eleven tags are `<kepala_putusan>`, `<identitas>`, `<riwayat_penahanan>`, `<riwayat_perkara>`, `<riwayat_tuntutan>`, `<riwayat_dakwaan>`, `<fakta>`, `<fakta_hukum>`, `<pertimbangan_hukum>`, `<amar_putusan>`, and `<penutup>`. The following is a further explanation of the tags:
 
@@ -72,3 +72,8 @@ In the main tag `<putusan>` there are several parameters as metadata from the xm
   </penutup>
 </putusan>
 ```
+
+
+##Note
+
+Regarding the distribution of **training and testing data**, we divide it into **90:10 portions** for each category on the paper (Table 1). We cannot provide data file training and testing that match the experiments we were done. Unfortunately, the data from the distribution was not backed up.
