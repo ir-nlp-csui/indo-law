@@ -74,6 +74,6 @@ In the main tag `<putusan>` there are several parameters as metadata from the xm
 ```
 
 
-##Note
+## Note
 
 Regarding the distribution of **training and testing data**, we divide it into **90:10 portions** for each category on the paper (Table 1). We cannot provide data file training and testing that match the experiments we were done. Unfortunately, the data from the distribution was not backed up.
