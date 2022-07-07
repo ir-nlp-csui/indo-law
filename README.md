@@ -1,8 +1,9 @@
 # indo-law: Indonesian law dataset containing section-annotated court descision documents
 
-This dataset consits of **Indonesian court decision documents** for general criminal cases which have been annotated for the document sections. There are **22,630 documents** in the `dataset` folder. The documents are available in **xml format**. The contents of the xml file are clean text extracted from the PDF files of court decision documents that are publicly available on the website of the [Indonesian Supreme Court Decision](<a href="https://putusan3.mahkamahagung.go.id/">https://putusan3.mahkamahagung.go.id/)/a
+## Introduction
+This dataset consists of **Indonesian court decision documents** for general criminal cases that have been annotated for the document sections. There are **22,630 documents** in the `dataset` folder. The documents are available in **xml format**. The contents of the xml file are clean text extracted from the PDF files of court decision documents that are publicly available on the website of the [Indonesian Supreme Court Decision](<a href="https://putusan3.mahkamahagung.go.id/">https://putusan3.mahkamahagung.go.id/</a>)
 
-11 sections were annotated from each court decision document: `<kepala_putusan>` (document opener), `<identitas> (defendant’s identity)`, `<riwayat_penahanan> (case history)`, `<riwayat_perkara> (detention history)`, `<riwayat_tuntutan> (prosecution history)`, `<riwayat_dakwaan> (indictment history)`, `<fakta> (facts)`, `<fakta_hukum> (legal facts)`, `<pertimbangan_hukum> (legal considerations)`, `<amar_putusan> (verdict)`, and `<penutup> (closing)`. These sections were used in our work to predict the category and the length of punishment in Indonesian courts (Please see the end of this README file to see the reference to our paper that explains about this work). 
+11 sections were annotated from each court decision document: `<kepala_putusan>` (*document opener*), `<identitas>` (*defendant’s identity*), `<riwayat_penahanan>` (*case history*), `<riwayat_perkara>` (*detention history*), `<riwayat_tuntutan>` (*prosecution history*), `<riwayat_dakwaan>` (*indictment history*), `<fakta>` (*facts*), `<fakta_hukum>` (*legal facts*), `<pertimbangan_hukum>` (*legal considerations*), `<amar_putusan>` (*verdict*), and `<penutup>` (*closing*). These sections were used in our work to predict the category and the length of punishment in Indonesian courts using a deep learning model CNN+attention (Please see the end of this README file to see the reference to our paper that explains about this work). 
 
 The following is a detail explanation of each annotated section:
 
@@ -21,9 +22,9 @@ The following is a detail explanation of each annotated section:
 | 11. | Penutup (*closing*) | ‘Demikianlah...’  (‘*Declares...*’) |
 
 
-## Metadata court decision documents
+## Dataset description
 
-In the main tag `<putusan>` there are several parameters as metadata from the xml file. An example of a fragment from the verdict file is as follows:
+Each document in this dataset is in the XML format. Each file contains one main tag `<putusan>` that encloses several tags, which corresponds to the document sections.  An example of a text fragment of XML file is as follows:
 
 ```xml
 <putusan amar="pidana" amar_lainnya="pidana-penjara-waktu-tentu" id="..." klasifikasi="pidana-umum" lama_hukuman="1650" lembaga_peradilan="pn-..." provinsi="jabar" status="berkekuatan-hukum-tetap" sub_klasifikasi="..." url="https://putusan3.mahkamahagung.go.id/direktori/putusan/....html">
@@ -78,7 +79,7 @@ In the main tag `<putusan>` there are several parameters as metadata from the xm
 
 ## Note
 
-Regarding the distribution of **training and testing data**, we divide it into **90:10 portions** for each category on the paper (Table 1). We cannot provide data file training and testing that match the experiments we were done. Unfortunately, the data from the distribution was not backed up.
+The distribution of **training and testing data** used in our work was **90:10 portions** for each category (see Table 1 on <a href="https://www.mdpi.com/2073-431X/11/6/88">our paper</a>). Unfortunately we cannot provide that data split used in our experiment because it was not backed up.
 
 
 ## References
@@ -86,3 +87,9 @@ Please cite the following paper if you use this dataset:
 
 **Nuranti, E. Q., Yulianti, E., & Husin, H. S.** (2022). <a href="https://www.mdpi.com/2073-431X/11/6/88">Predicting the Category and the Length of Punishment in Indonesian Courts Based on Previous Court Decision Documents.</a> Computers, 11(6), 88.
 
+
+## License
+You can use this dataset for free. You don't need our permission to use it. Please cite our paper if your work uses our data in your publication. Please note that you are not allowed to create a copy of this dataset and share it publicly in your own repository without our permission.
+
+## Contact
+evi.y [at] cs.ui.ac.id
