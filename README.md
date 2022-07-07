@@ -1,4 +1,5 @@
-# indo-law: Indonesian law dataset containing section-annotated court descision documents
+# indo-law: Indonesian law dataset containing section-annotated court decision documents
+
 
 ## Introduction
 This dataset consists of **Indonesian court decision documents** for general criminal cases that have been annotated for the document sections. There are **22,630 documents** in the `dataset` folder. The documents are available in **xml format**. The contents of the xml file are clean text extracted from the PDF files of court decision documents that are publicly available on the website of the [Indonesian Supreme Court Decision](<a href="https://putusan3.mahkamahagung.go.id/">https://putusan3.mahkamahagung.go.id/</a>)
@@ -92,4 +93,4 @@ Please cite the following paper if you use this dataset:
 You can use this dataset for free. You don't need our permission to use it. Please cite our paper if your work uses our data in your publication. Please note that you are not allowed to create a copy of this dataset and share it publicly in your own repository without our permission.
 
 ## Contact
-evi.y [at] cs.ui.ac.id
+**evi.y [at] cs.ui.ac.id**
