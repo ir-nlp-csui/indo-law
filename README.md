@@ -1,4 +1,4 @@
-# indo-law: Indonesian law dataset containing section-annotated court decision documents
+# indo-law: Indonesian law dataset containing section annotation of court decision documents
 
 
 ## Introduction
