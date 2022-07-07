@@ -1,8 +1,10 @@
-# Dataset Indonesian Law
+# indo-law: Indonesian law dataset containing section-annotated court descision documents
 
-This is a dataset of **court decision documents** for general criminal cases. There are **22,630 file** in the `dataset` folder. The files available in **xml format**. The contents of the xml file are clean text generated from court decision documents in the form of pdf that available on the website of the [Indonesian Supreme Court Decision](https://putusan3.mahkamahagung.go.id/).
+This dataset consits of **Indonesian court decision documents** for general criminal cases which have been annotated for the document sections. There are **22,630 documents** in the `dataset` folder. The documents are available in **xml format**. The contents of the xml file are clean text extracted from the PDF files of court decision documents that are publicly available on the website of the [Indonesian Supreme Court Decision](<a href="https://putusan3.mahkamahagung.go.id/">https://putusan3.mahkamahagung.go.id/)/a
 
-The main tag of each file is the `<putusan>` decision tag. The section of the decision is represented by eleven child tags. The eleven tags are `<kepala_putusan>`, `<identitas>`, `<riwayat_penahanan>`, `<riwayat_perkara>`, `<riwayat_tuntutan>`, `<riwayat_dakwaan>`, `<fakta>`, `<fakta_hukum>`, `<pertimbangan_hukum>`, `<amar_putusan>`, and `<penutup>`. The following is a further explanation of the tags:
+11 sections were annotated from each court decision document: `<kepala_putusan>` (document opener), `<identitas> (defendant’s identity)`, `<riwayat_penahanan> (case history)`, `<riwayat_perkara> (detention history)`, `<riwayat_tuntutan> (prosecution history)`, `<riwayat_dakwaan> (indictment history)`, `<fakta> (facts)`, `<fakta_hukum> (legal facts)`, `<pertimbangan_hukum> (legal considerations)`, `<amar_putusan> (verdict)`, and `<penutup> (closing)`. These sections were used in our work to predict the category and the length of punishment in Indonesian courts (Please see the end of this README file to see the reference to our paper that explains about this work). 
+
+The following is a detail explanation of each annotated section:
 
 | No. | Document Sections | Strings That Often Identified the Sections |
 | --- | --- | --- |
@@ -77,3 +79,10 @@ In the main tag `<putusan>` there are several parameters as metadata from the xm
 ## Note
 
 Regarding the distribution of **training and testing data**, we divide it into **90:10 portions** for each category on the paper (Table 1). We cannot provide data file training and testing that match the experiments we were done. Unfortunately, the data from the distribution was not backed up.
+
+
+## References
+Please cite the following paper if you use this dataset:
+
+**Nuranti, E. Q., Yulianti, E., & Husin, H. S.** (2022). <a href="https://www.mdpi.com/2073-431X/11/6/88">Predicting the Category and the Length of Punishment in Indonesian Courts Based on Previous Court Decision Documents.</a> Computers, 11(6), 88.
+
